@@ -5,27 +5,27 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-40 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden relative">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="pt-28 pb-12 md:pt-32 md:pb-18 px-6 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col items-start gap-6 relative z-10"
+            className="flex flex-col items-start gap-4 relative z-10"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] text-foreground">
               Purpose-built Revenue Intelligence for every org, with
               accountability for adoption
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-snug">
               Don't settle for generic "AI platforms"
             </p>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <a
                 href="mailto:pranav@trycosell.com"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Request a demo <span className="ml-2">→</span>
               </a>
@@ -37,7 +37,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative w-full h-[500px] flex items-center justify-center bg-secondary/50 rounded-3xl border border-border p-8"
+            className="relative w-full h-[420px] flex items-center justify-center bg-secondary/50 rounded-3xl border border-border p-7"
           >
             {/* SVG Diagram recreating the conceptual architecture */}
             <svg
@@ -132,21 +132,21 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 md:py-32 px-6 bg-secondary/30">
+      <section className="py-16 md:py-20 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-16 md:mb-24"
+            className="mb-10 md:mb-12"
           >
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
               Revenue Intelligence from SDRs to CROs
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {[
               {
                 num: "01",
@@ -176,15 +176,15 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group p-8 rounded-3xl bg-card border border-border/50 hover:border-primary/30 transition-colors shadow-sm hover:shadow-md"
+                className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-colors shadow-sm hover:shadow-md"
               >
-                <div className="text-primary font-mono text-xl mb-4 font-semibold">
+                <div className="text-primary font-mono text-lg mb-3 font-semibold">
                   {feature.num}
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold mb-3">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-snug">
                   {feature.desc}
                 </p>
               </motion.div>
@@ -194,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-32 px-6 bg-zinc-950 text-white relative overflow-hidden">
+      <section className="py-20 md:py-24 px-6 bg-zinc-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 pattern-dots" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
@@ -203,12 +203,12 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-5">
               Ready for outcome-driven Revenue Intelligence?
             </h2>
             <a
               href="mailto:pranav@trycosell.com"
-              className="inline-flex items-center justify-center px-10 py-5 text-lg font-medium text-white bg-primary hover:bg-primary/90 rounded-full transition-all shadow-lg shadow-primary/20 hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white bg-primary hover:bg-primary/90 rounded-full transition-all shadow-lg shadow-primary/20 hover:shadow-xl hover:-translate-y-1"
             >
               Request a demo <span className="ml-2">→</span>
             </a>
