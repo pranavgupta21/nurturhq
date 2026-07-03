@@ -213,7 +213,7 @@ export default function Home() {
             <PipelineMockup />
           </motion.div>
 
-          <div className="mx-auto mt-16 grid max-w-5xl gap-8 border-t border-zinc-200 pt-10 text-center md:grid-cols-3 md:text-left">
+          <div className="mx-auto mt-16 grid max-w-5xl gap-8 border-t border-zinc-200 pt-10 text-center md:grid-cols-3">
             <div>
               <div className="text-4xl font-semibold tracking-tight text-zinc-950">
                 3-4h
