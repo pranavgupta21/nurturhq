@@ -34,22 +34,11 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
-      - name: Configure deployment
-        id: deploy-config
-        run: |
-          if [ "${{ github.repository }}" = "pranavgupta21/cosell" ]; then
-            echo "base_path=/" >> "$GITHUB_OUTPUT"
-            echo "ga_measurement_id=G-ZTHHNW701J" >> "$GITHUB_OUTPUT"
-          else
-            echo "base_path=/cosell-staging/" >> "$GITHUB_OUTPUT"
-            echo "ga_measurement_id=" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Build
         run: npm run build
         env:
-          BASE_PATH: ${{ steps.deploy-config.outputs.base_path }}
-          VITE_GA_MEASUREMENT_ID: ${{ steps.deploy-config.outputs.ga_measurement_id }}
+          BASE_PATH: /
+          VITE_GA_MEASUREMENT_ID: G-ZTHHNW701J
 
       - name: Add SPA fallback
         run: cp dist/public/index.html dist/public/404.html
