@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
             <a href="#approach" className="transition-colors hover:text-foreground">
-              Approach
+              Why AI fails
             </a>
             <a href="#workflows" className="transition-colors hover:text-foreground">
               Workflows

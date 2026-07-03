@@ -75,21 +75,21 @@ function PipelineMockup() {
   const deals = [
     {
       name: "Northstar Bank",
-      stage: "Commit",
-      note: "Champion path needs confirmation",
       amount: "$118k",
+      label: "Champion unverified",
+      labelClass: "bg-amber-50 text-amber-700",
     },
     {
       name: "Helio Systems",
-      stage: "Best case",
-      note: "No next step after security review",
       amount: "$64k",
+      label: "Next step missing",
+      labelClass: "bg-red-50 text-red-700",
     },
     {
       name: "Arcwell Health",
-      stage: "Commit",
-      note: "Procurement owner identified",
       amount: "$91k",
+      label: "Procurement moving",
+      labelClass: "bg-emerald-50 text-emerald-700",
     },
   ];
 
@@ -117,22 +117,19 @@ function PipelineMockup() {
                 key={deal.name}
                 className="rounded-2xl border border-zinc-200 bg-white p-4"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <div className="font-semibold text-zinc-950">
                       {deal.name}
                     </div>
                     <div className="mt-1 text-sm text-zinc-500">
-                      {deal.note}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm font-semibold text-zinc-950">
                       {deal.amount}
                     </div>
-                    <div className="mt-1 text-xs text-zinc-500">
-                      {deal.stage}
-                    </div>
+                  </div>
+                  <div
+                    className={`w-fit rounded-full px-3 py-1 text-xs font-semibold ${deal.labelClass}`}
+                  >
+                    {deal.label}
                   </div>
                 </div>
               </div>
@@ -215,24 +212,60 @@ export default function Home() {
           >
             <PipelineMockup />
           </motion.div>
+
+          <div className="mx-auto mt-16 grid max-w-5xl gap-8 border-t border-zinc-200 pt-10 text-center md:grid-cols-3 md:text-left">
+            <div>
+              <div className="text-4xl font-semibold tracking-tight text-zinc-950">
+                3-4h
+              </div>
+              <div className="mt-3 text-lg text-zinc-500">
+                rep time saved daily
+              </div>
+            </div>
+            <div>
+              <div className="text-4xl font-semibold tracking-tight text-zinc-950">
+                24/7
+              </div>
+              <div className="mt-3 text-lg text-zinc-500">
+                deal risk monitoring
+              </div>
+            </div>
+            <div>
+              <div className="text-4xl font-semibold tracking-tight text-zinc-950">
+                1:1
+              </div>
+              <div className="mt-3 text-lg text-zinc-500">
+                fit to your process
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="approach" className="bg-white px-6 py-24 md:py-32">
-        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+      <section id="approach" className="border-y border-zinc-900 bg-zinc-950 px-6 py-20 text-white md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
-            <div className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              The difference
+            <div className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+              Why generic AI fails
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight text-zinc-950 md:text-5xl">
-              Not a blank canvas. Not another dashboard.
+            <h2 className="max-w-2xl text-4xl font-semibold tracking-tight md:text-6xl">
+              Revenue teams do not need another blank canvas.
             </h2>
           </div>
-          <p className="text-xl leading-9 text-zinc-600">
-            CoSell is designed around the operating layer of revenue teams:
-            the meetings, definitions, fields, handoffs, and coaching habits
-            that decide whether intelligence becomes action.
-          </p>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              "Outputs are not tied to the sales process.",
+              "Managers cannot see whether reps adopt the workflow.",
+              "CRM context is incomplete, stale, or too generic.",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-base leading-7 text-zinc-300"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
