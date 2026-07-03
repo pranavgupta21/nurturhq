@@ -17,14 +17,14 @@ export default function Layout({ children }: { children: ReactNode }) {
           </Link>
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
+            <a href="#approach" className="transition-colors hover:text-foreground">
+              Approach
+            </a>
             <a href="#workflows" className="transition-colors hover:text-foreground">
               Workflows
             </a>
             <a href="#process" className="transition-colors hover:text-foreground">
               Process
-            </a>
-            <a href="#teams" className="transition-colors hover:text-foreground">
-              Teams
             </a>
           </nav>
 
