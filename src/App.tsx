@@ -1,9 +1,7 @@
-import { useEffect } from "react";
-import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
+import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { trackPageView } from "@/lib/analytics";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Privacy from "@/pages/Privacy";
@@ -11,27 +9,14 @@ import Terms from "@/pages/Terms";
 
 const queryClient = new QueryClient();
 
-function AnalyticsPageView() {
-  const [location] = useLocation();
-
-  useEffect(() => {
-    trackPageView(location);
-  }, [location]);
-
-  return null;
-}
-
 function Router() {
   return (
-    <>
-      <AnalyticsPageView />
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/privacy" component={Privacy} />
-        <Route path="/terms" component={Terms} />
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
