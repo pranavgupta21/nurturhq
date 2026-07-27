@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { brand } from "@/lib/brand";
 
 export default function Terms() {
   return (
@@ -11,12 +12,12 @@ export default function Terms() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Acceptance of Terms</h2>
           <p>
-            By accessing or using the CoSell service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the service.
+            By accessing or using the {brand.name} service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the service.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Description of Service</h2>
           <p>
-            CoSell provides an AI-powered sales intelligence platform designed to assist revenue teams. The service is provided "as is" and "as available" without any warranties of any kind.
+            {brand.name} provides an AI-powered sales intelligence platform designed to assist revenue teams. The service is provided "as is" and "as available" without any warranties of any kind.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. User Obligations</h2>
@@ -26,7 +27,7 @@ export default function Terms() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">4. Intellectual Property</h2>
           <p>
-            The service and its original content, features, and functionality are and will remain the exclusive property of CoSell and its licensors.
+            The service and its original content, features, and functionality are and will remain the exclusive property of {brand.name} and its licensors.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">5. Termination</h2>
@@ -36,7 +37,7 @@ export default function Terms() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">6. Contact</h2>
           <p>
-            For any questions about these Terms, please contact us at pranav@trycosell.com.
+            For any questions about these Terms, please contact us at {brand.contactEmail}.
           </p>
         </div>
       </div>

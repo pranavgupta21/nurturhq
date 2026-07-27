@@ -1,8 +1,10 @@
 import { ReactNode } from "react";
 import { Link } from "wouter";
+import { brand, demoHref } from "@/lib/brand";
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const logoSrc = `${import.meta.env.BASE_URL}cosell-mark.svg`;
+  const logoSrc = `${import.meta.env.BASE_URL}nurtur-mark.svg`;
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans text-foreground">
@@ -12,7 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <Link href="/" className="inline-flex items-center gap-2.5">
             <img src={logoSrc} alt="" className="h-8 w-8" />
             <span className="text-2xl font-bold tracking-tight leading-none">
-              CoSell
+              {brand.name}
             </span>
           </Link>
 
@@ -29,7 +31,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           </nav>
 
           <a
-            href="mailto:pranav@trycosell.com?subject=CoSell%20workflow%20demo"
+            href={demoHref}
             className="hidden rounded-full bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-800 md:inline-flex"
           >
             Request demo
@@ -49,7 +51,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
           </div>
-          <div>© 2025 CoSell. All rights reserved.</div>
+          <div>© {currentYear} {brand.name}. All rights reserved.</div>
         </div>
       </footer>
     </div>

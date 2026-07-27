@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { brand } from "@/lib/brand";
 
 export default function Privacy() {
   return (
@@ -11,7 +12,7 @@ export default function Privacy() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Information We Collect</h2>
           <p>
-            CoSell ("we," "our," or "us") provides AI-powered sales intelligence software. We collect information you provide directly to us, such as when you create or modify your account, request support, or otherwise communicate with us.
+            {brand.name} ("we," "our," or "us") provides AI-powered sales intelligence software. We collect information you provide directly to us, such as when you create or modify your account, request support, or otherwise communicate with us.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. How We Use Your Information</h2>
@@ -31,7 +32,7 @@ export default function Privacy() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-6 mb-3">5. Contact Us</h2>
           <p>
-            If you have any questions about this Privacy Policy, please contact us at pranav@trycosell.com.
+            If you have any questions about this Privacy Policy, please contact us at {brand.contactEmail}.
           </p>
         </div>
       </div>

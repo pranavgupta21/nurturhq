@@ -1,6 +1,8 @@
-# CoSell
+# NurturHQ
 
 Static landing site built with Vite and React.
+
+Production domain: [nurturhq.com](https://nurturhq.com)
 
 ## Local development
 
@@ -13,3 +15,4 @@ npm run dev
 
 The site deploys from `.github/workflows/deploy-pages.yml` after pushes to `main`.
 In GitHub, set **Settings > Pages > Build and deployment > Source** to **GitHub Actions**.
+Set the custom domain to `nurturhq.com`.
