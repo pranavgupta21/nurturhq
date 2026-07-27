@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { brand, demoHref } from "@/lib/brand";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -9,9 +10,6 @@ import {
   Target,
   TriangleAlert,
 } from "lucide-react";
-
-const demoHref =
-  "mailto:pranav@trycosell.com?subject=CoSell%20workflow%20demo";
 
 const workflows = [
   {
@@ -183,7 +181,7 @@ export default function Home() {
             </h1>
 
             <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-zinc-600 md:text-xl">
-              CoSell turns your sales process into focused AI workflows for
+              {brand.name} turns your sales process into focused AI workflows for
               pipeline review, deal risk, CRM quality, and rep follow-through.
             </p>
 
@@ -310,7 +308,7 @@ export default function Home() {
           <SectionIntro
             eyebrow="Implementation"
             title="Small enough to ship. Serious enough to matter."
-            desc="The first build proves that the workflow is useful before CoSell expands across the revenue operating system."
+            desc={`The first build proves that the workflow is useful before ${brand.name} expands across the revenue operating system.`}
           />
 
           <div className="mt-16 grid gap-8 md:grid-cols-3">
@@ -336,7 +334,7 @@ export default function Home() {
             Bring one messy revenue workflow.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            We will map the signals, define the output, and show what CoSell
+            We will map the signals, define the output, and show what {brand.name}{" "}
             would build first.
           </p>
           <a
