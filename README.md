@@ -1,4 +1,4 @@
-# NurturHQ
+# Nurtur AI
 
 Static landing site built with Vite and React.
 

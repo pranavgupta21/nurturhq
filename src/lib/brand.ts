@@ -1,8 +1,8 @@
 export const brand = {
-  name: "NurturHQ",
+  name: "Nurtur AI",
   domain: "nurturhq.com",
   contactEmail: "pranav@nurturhq.com",
-  demoSubject: "NurturHQ workflow demo",
+  demoSubject: "Nurtur AI workflow demo",
 };
 
 export const demoHref = `mailto:${brand.contactEmail}?subject=${encodeURIComponent(
