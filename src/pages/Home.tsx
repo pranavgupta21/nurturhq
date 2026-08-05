@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   BrainCircuit,
-  CheckCircle2,
   Database,
   GitBranch,
   Gauge,
@@ -50,10 +49,22 @@ const engineeringLevers = [
 ];
 
 const metrics = [
-  "4.3x lower costs",
-  ">97% fact recall in agent outputs",
-  "~3x longer running context windows",
-  "3x faster responses",
+  {
+    value: "4.3x",
+    label: "Lower costs",
+  },
+  {
+    value: ">97%",
+    label: "Fact recall in agent outputs",
+  },
+  {
+    value: "~3x",
+    label: "Longer running context windows",
+  },
+  {
+    value: "3x",
+    label: "Faster agent responses",
+  },
 ];
 
 function SectionIntro({
@@ -132,30 +143,35 @@ export default function Home() {
         id="ownership"
         className="border-y border-zinc-900 bg-zinc-950 px-6 py-20 text-white md:py-28"
       >
-        <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-8">
-            <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary">
-              <Network className="h-6 w-6" />
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mx-auto max-w-6xl text-center text-4xl font-semibold tracking-tight md:whitespace-nowrap md:text-6xl">
+            Transparent implementation
+          </h2>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-8">
+              <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary">
+                <Network className="h-6 w-6" />
+              </div>
+              <h3 className="text-3xl font-semibold tracking-tight md:text-5xl">
+                You own the knowledge
+              </h3>
+              <p className="mt-6 text-lg leading-8 text-zinc-300">
+                The generated knowledge graph, memory & context, will be owned
+                by you, not some black box AI platform.
+              </p>
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-              You own the knowledge
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-zinc-300">
-              You own the knowledge graph, memory & context, not some black box
-              AI platform.
-            </p>
-          </div>
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-8">
-            <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary">
-              <Layers3 className="h-6 w-6" />
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-8">
+              <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary">
+                <Layers3 className="h-6 w-6" />
+              </div>
+              <h3 className="text-3xl font-semibold tracking-tight md:text-5xl">
+                On-prem or cloud
+              </h3>
+              <p className="mt-6 text-lg leading-8 text-zinc-300">
+                Run your revenue intelligence system wherever your security,
+                compliance, and operations need it.
+              </p>
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-              On-prem or cloud
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-zinc-300">
-              Run your revenue intelligence system wherever your security,
-              compliance, and operations need it.
-            </p>
           </div>
         </div>
       </section>
@@ -163,7 +179,7 @@ export default function Home() {
       <section id="engineering" className="bg-[#f7f8f5] px-6 py-24 md:py-32">
         <div className="mx-auto max-w-7xl">
           <SectionIntro
-            title="Advanced AI tech, built by the best"
+            title="State of the art AI, built by the best engineers"
             desc="We optimize the models, the task breakdown, and the knowledge layer together so that quality, cost, speed, and session length improve at the same time."
           />
 
@@ -211,19 +227,23 @@ export default function Home() {
 
       <section id="metrics" className="bg-white px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
-          <SectionIntro
-            title="Measurable outcomes, not AI slop"
-          />
+          <h2 className="mx-auto max-w-5xl text-center text-4xl font-semibold tracking-tight text-zinc-950 md:text-6xl">
+            Measurable outcomes, not AI slop
+          </h2>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
-            {metrics.map((metric) => (
-              <div key={metric} className="border-t border-zinc-200 pt-7">
-                <div className="flex gap-3 text-xl font-semibold leading-8 text-zinc-950">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                  {metric}
+          <div className="mt-14 overflow-hidden rounded-[1.75rem] bg-[#f7f8f5] text-zinc-950 shadow-xl shadow-zinc-200/80">
+            <div className="grid divide-y divide-zinc-200 md:grid-cols-4 md:divide-x md:divide-y-0">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="p-7 md:p-8">
+                  <div className="text-5xl font-semibold tracking-tight text-zinc-950 md:text-6xl">
+                    {metric.value}
+                  </div>
+                  <div className="mt-4 text-base font-medium leading-6 text-zinc-800">
+                    {metric.label}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -235,8 +255,7 @@ export default function Home() {
             Bring a revenue workflow worth proving.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            We will help you test it, measure it, and decide how you want to own
-            the next version.
+            We'll help you scope the problem, desired outcomes and timeline.
           </p>
           <a
             href={demoHref}
