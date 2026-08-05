@@ -51,7 +51,7 @@ const engineeringLevers = [
 const metrics = [
   {
     value: "4.3x",
-    label: "Lower costs",
+    label: "Lower token costs",
   },
   {
     value: ">97%",
