@@ -1,10 +1,19 @@
-import { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 import { Link } from "wouter";
 import { brand, demoHref } from "@/lib/brand";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const logoSrc = `${import.meta.env.BASE_URL}nurtur-mark.svg`;
   const currentYear = new Date().getFullYear();
+  const scrollToSection = (event: MouseEvent<HTMLAnchorElement>, id: string) => {
+    const section = document.getElementById(id);
+
+    if (!section) return;
+
+    event.preventDefault();
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.pushState(null, "", `#${id}`);
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans text-foreground">
@@ -19,14 +28,19 @@ export default function Layout({ children }: { children: ReactNode }) {
           </Link>
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
-            <a href="#approach" className="transition-colors hover:text-foreground">
-              Why AI fails
+            <a
+              href="#engineering"
+              onClick={(event) => scrollToSection(event, "engineering")}
+              className="transition-colors hover:text-foreground"
+            >
+              Engineering
             </a>
-            <a href="#workflows" className="transition-colors hover:text-foreground">
-              Workflows
-            </a>
-            <a href="#process" className="transition-colors hover:text-foreground">
-              Process
+            <a
+              href="#metrics"
+              onClick={(event) => scrollToSection(event, "metrics")}
+              className="transition-colors hover:text-foreground"
+            >
+              Metrics
             </a>
           </nav>
 
@@ -34,7 +48,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             href={demoHref}
             className="hidden rounded-full bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-800 md:inline-flex"
           >
-            Request demo
+            Scope a workflow
           </a>
         </div>
       </header>
