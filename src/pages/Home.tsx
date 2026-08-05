@@ -227,23 +227,19 @@ export default function Home() {
 
       <section id="metrics" className="bg-white px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mx-auto max-w-5xl text-center text-4xl font-semibold tracking-tight text-zinc-950 md:text-6xl">
-            Measurable outcomes, not AI slop
-          </h2>
+          <SectionIntro title="Measurable outcomes, not AI slop" />
 
-          <div className="mt-14 overflow-hidden rounded-[1.75rem] bg-[#f7f8f5] text-zinc-950 shadow-xl shadow-zinc-200/80">
-            <div className="grid divide-y divide-zinc-200 md:grid-cols-4 md:divide-x md:divide-y-0">
-              {metrics.map((metric) => (
-                <div key={metric.label} className="p-7 md:p-8">
-                  <div className="text-5xl font-semibold tracking-tight text-zinc-950 md:text-6xl">
-                    {metric.value}
-                  </div>
-                  <div className="mt-4 text-base font-medium leading-6 text-zinc-800">
-                    {metric.label}
-                  </div>
+          <div className="mt-14 grid divide-y divide-zinc-200 md:grid-cols-4 md:divide-x md:divide-y-0">
+            {metrics.map((metric) => (
+              <div key={metric.label} className="py-7 md:px-8 md:py-3">
+                <div className="text-5xl font-semibold tracking-tight text-zinc-950 md:text-6xl">
+                  {metric.value}
                 </div>
-              ))}
-            </div>
+                <div className="mt-4 text-base font-medium leading-6 text-zinc-600">
+                  {metric.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

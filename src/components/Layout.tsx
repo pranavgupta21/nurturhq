@@ -29,6 +29,13 @@ export default function Layout({ children }: { children: ReactNode }) {
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
             <a
+              href="#ownership"
+              onClick={(event) => scrollToSection(event, "ownership")}
+              className="transition-colors hover:text-foreground"
+            >
+              Transparency
+            </a>
+            <a
               href="#engineering"
               onClick={(event) => scrollToSection(event, "engineering")}
               className="transition-colors hover:text-foreground"
