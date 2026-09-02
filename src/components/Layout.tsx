@@ -1,9 +1,9 @@
 import type { MouseEvent, ReactNode } from "react";
 import { Link } from "wouter";
-import { brand, demoHref } from "@/lib/brand";
+import { brand, chromeStoreHref } from "@/lib/brand";
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const logoSrc = `${import.meta.env.BASE_URL}nurtur-mark.svg`;
+  const logoSrc = `${import.meta.env.BASE_URL}nurtur-reader-icon.png`;
   const currentYear = new Date().getFullYear();
   const scrollToSection = (event: MouseEvent<HTMLAnchorElement>, id: string) => {
     const section = document.getElementById(id);
@@ -17,9 +17,8 @@ export default function Layout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans text-foreground">
-      {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-50 px-5 py-4 md:px-8 md:py-6">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 rounded-full border border-black/10 bg-white/85 px-4 py-3 shadow-sm backdrop-blur md:px-5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 border border-black/10 bg-white/85 px-4 py-3 shadow-sm backdrop-blur md:px-5">
           <Link href="/" className="inline-flex items-center gap-2.5">
             <img src={logoSrc} alt="" className="h-8 w-8" />
             <span className="text-2xl font-bold tracking-tight leading-none">
@@ -29,48 +28,48 @@ export default function Layout({ children }: { children: ReactNode }) {
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
             <a
-              href="#ownership"
-              onClick={(event) => scrollToSection(event, "ownership")}
+              href="#how-it-works"
+              onClick={(event) => scrollToSection(event, "how-it-works")}
               className="transition-colors hover:text-foreground"
             >
-              Transparency
+              How it works
             </a>
             <a
-              href="#engineering"
-              onClick={(event) => scrollToSection(event, "engineering")}
+              href="#features"
+              onClick={(event) => scrollToSection(event, "features")}
               className="transition-colors hover:text-foreground"
             >
-              Engineering
+              Features
             </a>
             <a
-              href="#metrics"
-              onClick={(event) => scrollToSection(event, "metrics")}
+              href="#privacy"
+              onClick={(event) => scrollToSection(event, "privacy")}
               className="transition-colors hover:text-foreground"
             >
-              Metrics
+              Privacy
             </a>
           </nav>
 
           <a
-            href={demoHref}
-            className="hidden rounded-full bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-800 md:inline-flex"
+            href={chromeStoreHref}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-800 md:inline-flex"
           >
-            Scope a workflow
+            Add to Chrome
           </a>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="flex-grow">
         {children}
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-border bg-white py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+            <a href="/privacy" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">Privacy</a>
+            <a href="/terms" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">Terms</a>
           </div>
           <div>© {currentYear} {brand.name}. All rights reserved.</div>
         </div>
