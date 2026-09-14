@@ -59,7 +59,19 @@ export default function Home() {
       </section>
 
       <section id="reader-walkthrough" className="bg-[#fbf8f1] px-5 py-20 md:px-8 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.3fr_0.7fr] lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.7fr_0.3fr] lg:items-center">
+          <div className="w-full overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
+            <video
+              src={walkthroughVideo}
+              aria-label="Animated walkthrough of Nurtur Reader recommending, rewriting, and answering questions on an article"
+              className="aspect-video h-full w-full object-cover"
+              autoPlay
+              controls
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <div>
             <div className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#286a5e]">
               How it works
@@ -81,18 +93,6 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="w-full overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
-            <video
-              src={walkthroughVideo}
-              aria-label="Animated walkthrough of Nurtur Reader recommending, rewriting, and answering questions on an article"
-              className="aspect-video h-full w-full object-cover"
-              autoPlay
-              controls
-              loop
-              muted
-              playsInline
-            />
-          </div>
         </div>
       </section>
 
@@ -102,10 +102,6 @@ export default function Home() {
             <h2 className="text-4xl font-semibold leading-tight tracking-normal text-[#151814] md:text-5xl">
               Try Nurtur Reader in Chrome.
             </h2>
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-[#5f5a52]">
-              Install the extension, open an article, and use Nurtur where the
-              reading actually happens.
-            </p>
           </div>
           <div className="flex flex-none flex-col items-center gap-2">
             <a
