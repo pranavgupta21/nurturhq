@@ -17,10 +17,19 @@ function PrivacyRedirect() {
   return null;
 }
 
+function AnimationRedirect() {
+  useEffect(() => {
+    window.location.replace(`${import.meta.env.BASE_URL}animation/`);
+  }, []);
+
+  return null;
+}
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/animation" component={AnimationRedirect} />
       <Route path="/privacy" component={PrivacyRedirect} />
       <Route path="/terms" component={Terms} />
       <Route component={NotFound} />
