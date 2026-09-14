@@ -1,6 +1,6 @@
 import type { MouseEvent, ReactNode } from "react";
 import { Link } from "wouter";
-import { brand, chromeStoreHref } from "@/lib/brand";
+import { brand, chromeStoreHrefs } from "@/lib/brand";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const logoSrc = `${import.meta.env.BASE_URL}nurtur-reader-icon.png`;
@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
           <div className="hidden flex-col items-center gap-1 md:flex">
             <a
-              href={chromeStoreHref}
+              href={chromeStoreHrefs.header}
               target="_blank"
               rel="noreferrer"
               className="bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-800"
