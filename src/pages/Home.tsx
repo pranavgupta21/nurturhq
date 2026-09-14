@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { chromeStoreHref } from "@/lib/brand";
+import { chromeStoreHrefs } from "@/lib/brand";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -42,7 +42,7 @@ export default function Home() {
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:items-start">
               <div className="flex flex-col items-center gap-2">
                 <a
-                  href={chromeStoreHref}
+                  href={chromeStoreHrefs.hero}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#d9f0c8] px-5 text-base font-semibold text-[#121610] transition-colors hover:bg-white"
@@ -112,7 +112,7 @@ export default function Home() {
           </div>
           <div className="flex flex-none flex-col items-center gap-2">
             <a
-              href={chromeStoreHref}
+              href={chromeStoreHrefs.final}
               target="_blank"
               rel="noreferrer"
               className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#286a5e] px-5 text-base font-semibold text-white transition-colors hover:bg-[#1f554b]"
