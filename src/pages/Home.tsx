@@ -68,13 +68,12 @@ export default function Home() {
 
       <section id="reader-walkthrough" className="bg-[#fbf8f1] px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.7fr_0.3fr] lg:items-center">
-          <div className="w-full overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
+          <div className="aspect-[16/7.4] w-full overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
             <video
               src={walkthroughVideo}
               aria-label="Animated walkthrough of Nurtur Reader recommending, rewriting, and answering questions on an article"
-              className="aspect-video h-full w-full object-cover"
+              className="h-full w-full scale-[1.28] object-cover"
               autoPlay
-              controls
               loop
               muted
               playsInline
