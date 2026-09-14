@@ -6,7 +6,6 @@ import {
   Store,
 } from "lucide-react";
 
-const demoImage = `${import.meta.env.BASE_URL}nurtur-reader-demo.png`;
 const walkthroughVideo = `${import.meta.env.BASE_URL}animation/exports/nurtur-reader-walkthrough.mp4`;
 
 export default function Home() {
@@ -15,9 +14,7 @@ export default function Home() {
       <section
         className="relative min-h-[92svh] overflow-hidden bg-[#151814] px-5 pt-28 text-white md:px-8 md:pt-32"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(21, 24, 20, 0.92) 0%, rgba(21, 24, 20, 0.78) 42%, rgba(21, 24, 20, 0.28) 100%), url(${demoImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundImage: "linear-gradient(135deg, #151814 0%, #1f2a23 100%)",
         }}
       >
         <div className="mx-auto flex max-w-7xl flex-col justify-center pb-20 pt-10 md:min-h-[calc(92svh-8rem)] md:pb-24">
