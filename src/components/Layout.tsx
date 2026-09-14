@@ -28,36 +28,27 @@ export default function Layout({ children }: { children: ReactNode }) {
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
             <a
-              href="#how-it-works"
-              onClick={(event) => scrollToSection(event, "how-it-works")}
+              href="#reader-walkthrough"
+              onClick={(event) => scrollToSection(event, "reader-walkthrough")}
               className="transition-colors hover:text-foreground"
             >
               How it works
             </a>
-            <a
-              href="#features"
-              onClick={(event) => scrollToSection(event, "features")}
-              className="transition-colors hover:text-foreground"
-            >
-              Features
-            </a>
-            <a
-              href="#privacy"
-              onClick={(event) => scrollToSection(event, "privacy")}
-              className="transition-colors hover:text-foreground"
-            >
-              Privacy
-            </a>
           </nav>
 
-          <a
-            href={chromeStoreHref}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-800 md:inline-flex"
-          >
-            Add to Chrome
-          </a>
+          <div className="hidden flex-col items-center gap-1 md:flex">
+            <a
+              href={chromeStoreHref}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-800"
+            >
+              Add to Chrome
+            </a>
+            <span className="text-xs font-semibold text-[#286a5e]">
+              Currently in Beta
+            </span>
+          </div>
         </div>
       </header>
 
