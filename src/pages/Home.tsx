@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { chromeStoreHref } from "@/lib/brand";
+import { chromeStoreHref, demoHref } from "@/lib/brand";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -62,7 +62,7 @@ export default function Home() {
           >
             <div className="mb-5 inline-flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-semibold text-[#d9f0c8] backdrop-blur">
               <Sprout className="h-4 w-4" />
-              Chrome extension for better reading
+              Early beta Chrome extension
             </div>
             <h1 className="text-5xl font-semibold leading-[1.02] tracking-normal md:text-7xl">
               Nurtur Reader
@@ -71,6 +71,11 @@ export default function Home() {
               Read online articles with an AI companion that helps you decide
               what matters, rewrite hard sections, and ask grounded questions
               without leaving the page.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-300 md:text-lg">
+              Nurtur Reader is early. It is built for readers who want to stop
+              wasting time on low-signal articles and help shape a calmer,
+              faster way to read.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
@@ -213,6 +218,33 @@ export default function Home() {
                 <p className="text-base leading-7 text-zinc-100">{item}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-16 md:px-8 md:py-20">
+        <div className="mx-auto grid max-w-5xl gap-8 border border-[#d8cfbf] bg-[#fbf8f1] p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
+          <div>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#286a5e]">
+              Early beta
+            </div>
+            <h2 className="text-3xl font-semibold leading-tight tracking-normal text-[#151814] md:text-4xl">
+              Try it like a beta, not a finished app.
+            </h2>
+          </div>
+          <div className="text-base leading-7 text-[#5f5a52]">
+            <p>
+              The best feedback is where the recommendation felt wrong, the
+              rewrite lost nuance, the page extraction failed, or a generated
+              explanation helped you keep reading.
+            </p>
+            <a
+              href={demoHref}
+              className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 bg-[#286a5e] px-4 font-semibold text-white transition-colors hover:bg-[#1f554b]"
+            >
+              Send beta feedback
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
