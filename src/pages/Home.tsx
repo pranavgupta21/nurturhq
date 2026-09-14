@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <Layout>
       <section
-        className="relative min-h-[92svh] overflow-hidden bg-[#151814] px-5 pt-28 text-white md:px-8 md:pt-32"
+        className="relative min-h-[72svh] overflow-hidden bg-[#151814] px-5 pt-28 text-white md:px-8 md:pt-32"
         style={{
           backgroundImage: "linear-gradient(135deg, #151814 0%, #1f2a23 100%)",
         }}
       >
-        <div className="mx-auto flex max-w-7xl flex-col justify-center pb-20 pt-10 md:min-h-[calc(92svh-8rem)] md:pb-24">
+        <div className="mx-auto flex max-w-7xl flex-col justify-center pb-14 pt-8 md:min-h-[calc(72svh-8rem)] md:pb-16">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
