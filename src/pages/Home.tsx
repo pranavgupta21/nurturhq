@@ -3,7 +3,6 @@ import { chromeStoreHref } from "@/lib/brand";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Sprout,
   Store,
 } from "lucide-react";
 
@@ -28,17 +27,12 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <div className="mb-5 inline-flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-semibold text-[#d9f0c8] backdrop-blur">
-              <Sprout className="h-4 w-4" />
-              Chrome extension for better reading
-            </div>
             <h1 className="text-5xl font-semibold leading-[1.02] tracking-normal md:text-7xl">
               Nurtur Reader
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-zinc-100 md:text-2xl md:leading-10">
-              Save time by knowing whether to read and what to read. Read
-              better by rewriting to your own reading style. Learn better with
-              in-place, real-time QA.
+              Read and learn how you like to, not how it was written for
+              everyone
             </p>
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:items-start">
               <div className="flex flex-col items-center gap-2">
