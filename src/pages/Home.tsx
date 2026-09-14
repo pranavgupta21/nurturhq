@@ -28,8 +28,8 @@ export default function Home() {
               Nurtur Reader
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-zinc-100 md:text-2xl md:leading-10">
-              Read and learn how you like to, not how it was written for
-              everyone
+              Read and learn how <strong><em>YOU</em></strong> like to, not how
+              it was written for everyone
             </p>
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:items-start">
               <div className="flex flex-col items-center gap-2">
