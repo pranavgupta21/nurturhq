@@ -14,7 +14,15 @@ export default function Home() {
       <section
         className="relative min-h-[72svh] overflow-hidden bg-[#151814] px-5 pt-28 text-white md:px-8 md:pt-32"
         style={{
-          backgroundImage: "linear-gradient(135deg, #151814 0%, #1f2a23 100%)",
+          backgroundColor: "#121610",
+          backgroundImage: [
+            "linear-gradient(115deg, transparent 0%, rgba(217, 240, 200, 0.11) 42%, transparent 66%)",
+            "linear-gradient(90deg, rgba(251, 248, 241, 0.06) 1px, transparent 1px)",
+            "linear-gradient(0deg, rgba(251, 248, 241, 0.045) 1px, transparent 1px)",
+            "linear-gradient(135deg, #121610 0%, #17241f 44%, #263426 100%)",
+          ].join(", "),
+          backgroundPosition: "center, center, center, center",
+          backgroundSize: "auto, 88px 88px, 88px 88px, auto",
         }}
       >
         <div className="mx-auto flex max-w-7xl flex-col justify-center pb-14 pt-8 md:min-h-[calc(72svh-8rem)] md:pb-16">
@@ -60,13 +68,12 @@ export default function Home() {
 
       <section id="reader-walkthrough" className="bg-[#fbf8f1] px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.7fr_0.3fr] lg:items-center">
-          <div className="w-full overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
+          <div className="aspect-video w-full overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
             <video
               src={walkthroughVideo}
               aria-label="Animated walkthrough of Nurtur Reader recommending, rewriting, and answering questions on an article"
-              className="aspect-video h-full w-full object-cover"
+              className="h-full w-full scale-[1.08] object-cover"
               autoPlay
-              controls
               loop
               muted
               playsInline
