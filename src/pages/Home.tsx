@@ -16,6 +16,7 @@ import {
 
 const demoImage = `${import.meta.env.BASE_URL}nurtur-reader-demo.png`;
 const sidebarImage = `${import.meta.env.BASE_URL}nurtur-reader-sidebar.png`;
+const walkthroughVideo = `${import.meta.env.BASE_URL}animation/exports/nurtur-reader-walkthrough.mp4`;
 
 const featureBlocks = [
   {
@@ -96,6 +97,35 @@ export default function Home() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-[#fbf8f1] px-5 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 max-w-3xl">
+            <div className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#286a5e]">
+              Product walkthrough
+            </div>
+            <h2 className="text-4xl font-semibold leading-tight tracking-normal text-[#151814] md:text-6xl">
+              See the reader layer in motion.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-[#5f5a52]">
+              Open an article, ask Nurtur whether it is worth your time, turn
+              the useful parts into a cleaner learning view, and ask questions
+              without leaving the page.
+            </p>
+          </div>
+          <div className="overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
+            <video
+              src={walkthroughVideo}
+              className="aspect-video h-full w-full object-cover"
+              autoPlay
+              controls
+              loop
+              muted
+              playsInline
+            />
+          </div>
         </div>
       </section>
 
