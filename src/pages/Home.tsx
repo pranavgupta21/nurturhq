@@ -68,25 +68,29 @@ export default function Home() {
       </section>
 
       <section id="reader-walkthrough" className="bg-[#fbf8f1] px-5 py-20 md:px-8 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.3fr_0.7fr] lg:items-center">
           <div>
             <div className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#286a5e]">
-              Reader walkthrough
+              How it works
             </div>
-            <h2 className="text-4xl font-semibold leading-tight tracking-normal text-[#151814] md:text-6xl">
-              Decide faster. Read cleaner. Ask without leaving the page.
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-[#5f5a52]">
-              Open an article, ask Nurtur whether it is worth your time, turn
-              the useful parts into a cleaner learning view, and ask questions
-              without leaving the page.
-            </p>
-            <p className="mt-5 text-lg leading-8 text-[#5f5a52]">
-              Highlight any passage to explain, summarize, rewrite, diagram, or
-              ask.
-            </p>
+            <ul className="grid gap-4 text-base leading-7 text-[#26231f]">
+              <li className="border-l-2 border-[#286a5e] pl-4">
+                Find out which parts are worth reading
+              </li>
+              <li className="border-l-2 border-[#286a5e] pl-4">
+                Rewrite based on your existing knowledge and reading preferences
+              </li>
+              <li className="border-l-2 border-[#286a5e] pl-4">
+                Rewrite with inline explanations, diagrams, images, equations,
+                links
+              </li>
+              <li className="border-l-2 border-[#286a5e] pl-4">
+                Have detailed in-context discussions with AI, not one humungous
+                chat
+              </li>
+            </ul>
           </div>
-          <div className="mx-auto w-full max-w-[560px] overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm lg:ml-auto">
+          <div className="w-full overflow-hidden border border-[#d8cfbf] bg-[#151814] shadow-sm">
             <video
               src={walkthroughVideo}
               aria-label="Animated walkthrough of Nurtur Reader recommending, rewriting, and answering questions on an article"
